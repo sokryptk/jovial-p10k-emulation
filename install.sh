@@ -92,6 +92,7 @@ install_zsh_plugins() {
         zsh-autosuggestions
         zsh-syntax-highlighting
         zsh-history-enquirer
+        command-not-found
 
         # TODO: case "$OSTYPE" in (darwin*)
         osx
@@ -133,7 +134,6 @@ install_theme() {
     if ! grep -q "p10k configure" "${S_HOME}/.zshrc"; then
         echo "# To customize prompt, run 'p10k configure' or edit ~/.p10k.zsh." >> ${S_HOME}/.zshrc
         echo "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ${S_HOME}/.zshrc
-        echo "source /etc/zsh_command_not_found" >> ${S_HOME}/.zshrc
     fi
 }
 
